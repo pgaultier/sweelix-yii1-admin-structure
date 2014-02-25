@@ -26,7 +26,7 @@ use sweelix\yii1\ext\entities\Node;
 			<?php echo Html::activeLabel($node, 'nodeRedirection', array('class'=>'modeRedirection'))?><br/>
 			<?php echo Html::activeDropDownList($node, 'nodeRedirection', Helper::linearizeNodesToDropDownList($treeDataProvider), array('class'=>'modeRedirection classic'))?><br/>
 			<?php echo Html::link(Yii::t('structure', 'Reset'), array('node/property', 'nodeId' => $node->nodeId), array('class' => 'button danger'))?>
-			<?php echo Html::htmlButton(Yii::t('structure', 'Validate'), array('type' => 'submit', 'class' => 'success'))?>
+			<?php echo Html::htmlButton(Yii::t('structure', 'Ok'), array('type' => 'submit', 'class' => 'success'))?>
 
 		</fieldset>
 <?php

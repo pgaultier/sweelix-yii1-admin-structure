@@ -35,7 +35,7 @@ $dataForm = new ElasticForm($content);
 			<?php else : ?>
 			<?php echo Html::link(Yii::t('structure', 'Reset'), array('content/detail', 'contentId' => $content->contentId), array('class' => 'button danger'))?>
 			<?php endif;?>
-			<?php echo Html::submitButton(Yii::t('structure', 'Validate'), array('class' => 'success'))?>
+			<?php echo Html::submitButton(Yii::t('structure', 'Ok'), array('class' => 'success'))?>
 		</fieldset>
 <?php
 if((isset($notice) === true) && ($notice === true)) {

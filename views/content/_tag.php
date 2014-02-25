@@ -36,7 +36,7 @@ use sweelix\yii1\web\helpers\Html;
 	endforeach;
 ?>
 <?php echo Html::link(Yii::t('structure', 'Reset'), array('content/tag', 'contentId' => $content->contentId), array('class' => 'button danger'))?>
-<?php echo Html::submitButton(Yii::t('structure', 'Validate'), array('class' => 'success'))?>
+<?php echo Html::submitButton(Yii::t('structure', 'Ok'), array('class' => 'success'))?>
 
 </fieldset>
 <?php

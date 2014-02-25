@@ -20,11 +20,11 @@ Yii::app()->getModule('sweeft')->registerWysiwygEditor();
 <?php $this->widget('sweelix\yii1\admin\core\widgets\Breadcrumb', array(
 	'elements' => array(
 		array(
-			'content' => Yii::t('sweelix', 'Step {n}', array('{n}' => 1 )),
+			'content' => Yii::t('structure', 'Step {n}', array('{n}' => 1 )),
 			'url' => array('step1', 'nodeId' => $sourceNode->nodeId),
 		),
 		array(
-				'content' => Yii::t('sweelix', 'Step {n}', array('{n}' => 2 )),
+				'content' => Yii::t('structure', 'Step {n}', array('{n}' => 2 )),
 		),
 	)
 )); ?>

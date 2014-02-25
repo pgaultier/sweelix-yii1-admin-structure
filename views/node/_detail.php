@@ -25,7 +25,7 @@ $dataForm = new ElasticForm($node);
 			<?php echo Html::activeTextField($node, 'nodeUrl', array('class' => 'classic'))?><br/>
 			<?php echo $dataForm->render(); ?><br/>
 			<?php echo Html::link(Yii::t('structure', 'Reset'), array('node/detail', 'nodeId' => $node->nodeId), array('class' => 'button danger'))?>
-			<?php echo Html::htmlButton(Yii::t('structure', 'Validate'), array('type' => 'submit', 'class' => 'success'))?>
+			<?php echo Html::htmlButton(Yii::t('structure', 'Ok'), array('type' => 'submit', 'class' => 'success'))?>
 		</fieldset>
 <?php
 	if((isset($notice) === true) && ($notice === true)) {

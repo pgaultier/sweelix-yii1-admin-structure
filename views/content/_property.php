@@ -38,7 +38,7 @@ use sweelix\yii1\ext\components\Helper;
 		<?php else: ?>
 		<?php echo Html::link(Yii::t('structure', 'Reset'), array('content/property', 'contentId' => $content->contentId), array('class' => 'button danger'))?>
 		<?php endif; ?>
-		<?php echo Html::htmlButton(Yii::t('structure', 'Validate'), array('type' => 'submit', 'class' => 'success'))?>
+		<?php echo Html::htmlButton(Yii::t('structure', 'Ok'), array('type' => 'submit', 'class' => 'success'))?>
 	</fieldset>
 
 <?php
