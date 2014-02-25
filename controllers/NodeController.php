@@ -486,10 +486,12 @@ class NodeController extends Controller {
 	/**
 	 * Change status of current selected content and go back to list
 	 *
+	 * @param integer $page current page to display
+	 *
 	 * @return void
 	 * @since  1.2.0
 	 */
-	public function actionChangeContentStatus() {
+	public function actionChangeContentStatus($page=0) {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
 			$content = Content::model()->findByPk(\Yii::app()->getRequest()->getParam('contentId', 0));
@@ -498,7 +500,7 @@ class NodeController extends Controller {
 				$content->contentStatus = $mode;
 				$content->save();
 			}
-			$this->_renderListContent();
+			$this->_renderListContent($page);
 		} catch(\Exception $e) {
 			\Yii::log('Error in '.__METHOD__.'():'.$e->getMessage(), \CLogger::LEVEL_ERROR, 'sweelix.yii1.admin.structure.controllers');
 			throw $e;
@@ -508,10 +510,13 @@ class NodeController extends Controller {
 	/**
 	 * Reorder content and redraw list
 	 *
+	 * @param integer $contentId contentId to move
+	 * @param integer $page      current page to display
+	 *
 	 * @return void
 	 * @since  1.2.0
 	 */
-	public function actionMoveContent($contentId) {
+	public function actionMoveContent($contentId, $page=0) {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
 			$content = Content::model()->findByPk(\Yii::app()->request->getParam('contentId', 0));
@@ -524,7 +529,7 @@ class NodeController extends Controller {
 					$res = $content->move($target);
 				}
 			}
-			$this->_renderListContent();
+			$this->_renderListContent($page);
 		} catch(\Exception $e) {
 			\Yii::log('Error in '.__METHOD__.'():'.$e->getMessage(), \CLogger::LEVEL_ERROR, 'sweelix.yii1.admin.structure.controllers');
 			throw $e;
@@ -534,13 +539,15 @@ class NodeController extends Controller {
 	/**
 	 * List contents for selected node
 	 *
+	 * @param integer $page current page to display
+	 *
 	 * @return void
 	 * @since  1.2.0
 	 */
-	public function actionListContent() {
+	public function actionListContent($page=0) {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
-			$this->_renderListContent();
+			$this->_renderListContent($page);
 		} catch(\Exception $e) {
 			\Yii::log('Error in '.__METHOD__.'():'.$e->getMessage(), \CLogger::LEVEL_ERROR, 'sweelix.yii1.admin.structure.controllers');
 			throw $e;
@@ -551,10 +558,12 @@ class NodeController extends Controller {
 	 * Render content list for current node
 	 * currentNode must be initialised
 	 *
+	 * @param integer $page current page to display
+	 *
 	 * @return void
 	 * @since  1.2.0
 	 */
-	private function _renderListContent() {
+	private function _renderListContent($page=0) {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
 			$contentCriteriaBuilder = new CriteriaBuilder('content');
@@ -562,14 +571,24 @@ class NodeController extends Controller {
 			$contentCriteriaBuilder->orderBy('contentOrder');
 			if(\Yii::app()->request->isAjaxRequest === true) {
 				$this->renderPartial('_list', array(
-					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider(array('pagination' => false)),
+					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider([
+						'pagination' => [
+							'pageSize' => $this->module->pageSize,
+							'currentPage' => $page,
+						]
+					]),
 				));
 			} else {
 				$this->render('list', array(
 					'breadcrumb' => $this->buildBreadcrumb($this->currentNode->nodeId),
 					'mainMenu' => $this->buildMainMenu(0, false),
 					'node' => $this->currentNode,
-					'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array('pagination' => false)),
+					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider([
+						'pagination' => [
+							'pageSize' => $this->module->pageSize,
+							'currentPage' => $page,
+						]
+					]),
 				));
 			}
 		} catch(\Exception $e) {
@@ -691,10 +710,12 @@ class NodeController extends Controller {
 	/**
 	 * remove content from selected node
 	 *
+	 * @param integer $page current page to display
+	 *
 	 * @return void
 	 * @since  1.2.0
 	 */
-	public function actionDetachContent() {
+	public function actionDetachContent($page=0) {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
 			if($this->currentContent !== null) {
@@ -703,7 +724,7 @@ class NodeController extends Controller {
 				$this->currentContent->save(array('nodeId'));
 				$this->currentNode->reOrder();
 			}
-			$this->_renderListContent();
+			$this->_renderListContent($page);
 		} catch(\Exception $e) {
 			\Yii::log('Error in '.__METHOD__.'():'.$e->getMessage(), \CLogger::LEVEL_ERROR, 'sweelix.yii1.admin.structure.controllers');
 			throw $e;
