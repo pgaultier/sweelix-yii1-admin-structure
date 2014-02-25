@@ -1,0 +1,363 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sweelix - Structure\n"
+"POT-Creation-Date: 2014-02-25 16:06+0100\n"
+"PO-Revision-Date: 2014-02-25 16:13+0100\n"
+"Last-Translator: \n"
+"Language-Team: Sweelix <pgaultier@sweelix.net>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: t:1c,2\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+msgctxt "structure"
+msgid "Structure"
+msgstr "Gestion de contenu"
+
+msgctxt "structure"
+msgid "{n} content in node|{n} contents in node, page {pageNum} / {pageCount}"
+msgstr ""
+"{n} article dans la rubrique|{n} articles dans la rubrique, page {pageNum} / "
+"{pageCount}"
+
+#: ../controllers/ContentController.php:75
+msgctxt "structure"
+msgid "Orphan"
+msgstr "Orphelin"
+
+#: ../controllers/ContentController.php:98
+#: ../controllers/NodeController.php:91
+msgctxt "structure"
+msgid "Node Content"
+msgstr "Articles de la rubrique"
+
+#: ../controllers/ContentController.php:103
+#: ../controllers/NodeController.php:96
+msgctxt "structure"
+msgid "Node Configuration"
+msgstr "Paramétrage de la rubrique"
+
+#: ../controllers/ContentController.php:108
+msgctxt "structure"
+msgid "Content Configuration"
+msgstr "Paramétrage du contenu"
+
+#: ../controllers/ContentController.php:115
+msgctxt "structure"
+msgid "Content detail"
+msgstr "Contenu de l'article"
+
+#: ../controllers/ContentController.php:120
+#: ../controllers/NodeController.php:108
+msgctxt "structure"
+msgid "Properties"
+msgstr "Propriétés"
+
+#: ../controllers/ContentController.php:125
+#: ../controllers/NodeController.php:113
+msgctxt "structure"
+msgid "Associated tags"
+msgstr "Mots-clefs associés"
+
+#: ../controllers/ContentController.php:130
+#: ../controllers/NodeController.php:118
+msgctxt "structure"
+msgid "Metadata"
+msgstr "Meta-données"
+
+#: ../controllers/ContentController.php:135
+#: ../controllers/NodeController.php:123
+msgctxt "structure"
+msgid "Admin"
+msgstr "Admin"
+
+#: ../controllers/ContentController.php:309
+#: ../controllers/ContentController.php:352
+msgctxt "structure"
+msgid "Template is not defined for current content"
+msgstr "Le template n'a pas été défini pour l'article courant"
+
+#: ../controllers/NodeController.php:103
+msgctxt "structure"
+msgid "Node detail"
+msgstr "Contenu de la rubrique"
+
+#: ../controllers/NodeController.php:288 ../controllers/NodeController.php:329
+msgctxt "structure"
+msgid "Template is not defined for current node"
+msgstr "Le template n'a pas été défini pour la rubrique courante"
+
+#: ../views/content/_contentHeader.php:34 ../views/node/_headerView.php:19
+#: ../views/node/_itemView.php:33
+msgctxt "structure"
+msgid "ID"
+msgstr "Id"
+
+#: ../views/content/_contentHeader.php:42
+#: ../views/content/_contentHeader.php:45 ../views/node/_itemView.php:41
+#: ../views/node/_itemView.php:44
+msgctxt "structure"
+msgid "offline"
+msgstr "désactivé"
+
+#: ../views/content/_contentHeader.php:55
+#: ../views/content/_contentHeader.php:58 ../views/node/_itemView.php:54
+#: ../views/node/_itemView.php:57
+msgctxt "structure"
+msgid "draft"
+msgstr "brouillon"
+
+#: ../views/content/_contentHeader.php:68
+#: ../views/content/_contentHeader.php:70 ../views/node/_itemView.php:67
+#: ../views/node/_itemView.php:69
+msgctxt "structure"
+msgid "online"
+msgstr "publié"
+
+#: ../views/content/_detail.php:34 ../views/content/_detail.php:36
+#: ../views/content/_meta.php:36 ../views/content/_property.php:37
+#: ../views/content/_property.php:39 ../views/content/_tag.php:38
+#: ../views/node/_detail.php:27 ../views/node/_meta.php:32
+#: ../views/node/_property.php:28 ../views/node/_tag.php:35
+msgctxt "structure"
+msgid "Reset"
+msgstr "Annuler"
+
+#: ../views/content/_detail.php:38 ../views/content/_meta.php:37
+#: ../views/content/_property.php:41 ../views/content/_tag.php:39
+#: ../views/node/_detail.php:28 ../views/node/_meta.php:33
+#: ../views/node/_property.php:29 ../views/node/_tag.php:36
+msgctxt "structure"
+msgid "Ok"
+msgstr "Ok"
+
+#: ../views/content/_detail.php:44 ../views/content/_meta.php:42
+#: ../views/content/_property.php:48 ../views/content/_tag.php:46
+#: ../views/node/_detail.php:34 ../views/node/_meta.php:39
+#: ../views/node/_property.php:36 ../views/node/_tag.php:43
+msgctxt "structure"
+msgid "Info"
+msgstr "Info"
+
+#: ../views/content/_detail.php:46
+msgctxt "structure"
+msgid "Content details were saved"
+msgstr "Les informations de l'article ont été enregistrées"
+
+#: ../views/content/_detail.php:51 ../views/content/_property.php:55
+#: ../views/content/_tag.php:53 ../views/node/_detail.php:41
+#: ../views/node/_property.php:43 ../views/node/_tag.php:50
+msgctxt "structure"
+msgid "Error"
+msgstr "Erreur"
+
+#: ../views/content/_detail.php:53
+msgctxt "structure"
+msgid "Content details were not saved"
+msgstr "Les informations de l'article n'ont pas été enregistrées"
+
+#: ../views/content/_meta.php:44
+msgctxt "structure"
+msgid "Content metas were saved"
+msgstr "Les métas ont été enregistrées"
+
+#: ../views/content/_property.php:50
+msgctxt "structure"
+msgid "Content properties were saved"
+msgstr "Les propriétés ont été sauvegardées"
+
+#: ../views/content/_property.php:57
+msgctxt "structure"
+msgid "Content properties were not saved"
+msgstr "Les propriétés n'ont pas été sauvegardées"
+
+#: ../views/content/_tag.php:48
+msgctxt "structure"
+msgid "Content tags were saved"
+msgstr "Les mots-clefs ont été sauvegardées"
+
+#: ../views/content/_tag.php:55
+msgctxt "structure"
+msgid "Content tags were not saved"
+msgstr "Les mots-clefs n'ont pas été sauvegardées"
+
+#: ../views/content/admin.php:25 ../views/content/admin.php:27
+#: ../views/content/detail.php:29 ../views/content/detail.php:31
+#: ../views/content/meta.php:27 ../views/content/meta.php:29
+#: ../views/content/property.php:32 ../views/content/property.php:34
+#: ../views/content/step1.php:31 ../views/content/step1.php:33
+#: ../views/content/step2.php:37 ../views/content/step2.php:39
+#: ../views/content/tag.php:28 ../views/content/tag.php:30
+#: ../views/node/admin.php:26 ../views/node/admin.php:28
+#: ../views/node/detail.php:30 ../views/node/detail.php:32
+#: ../views/node/list.php:28 ../views/node/list.php:30
+#: ../views/node/meta.php:28 ../views/node/meta.php:30
+#: ../views/node/property.php:28 ../views/node/property.php:30
+#: ../views/node/step1.php:33 ../views/node/step1.php:35
+#: ../views/node/step2.php:37 ../views/node/step2.php:39
+#: ../views/node/tag.php:31 ../views/node/tag.php:33
+msgctxt "structure"
+msgid "Create new content"
+msgstr "Créer un article"
+
+#: ../views/content/admin.php:32 ../views/content/admin.php:34
+#: ../views/content/detail.php:36 ../views/content/detail.php:38
+#: ../views/content/meta.php:34 ../views/content/meta.php:36
+#: ../views/content/property.php:39 ../views/content/property.php:41
+#: ../views/content/step1.php:38 ../views/content/step1.php:40
+#: ../views/content/step2.php:44 ../views/content/step2.php:46
+#: ../views/content/tag.php:35 ../views/content/tag.php:37
+#: ../views/node/admin.php:33 ../views/node/admin.php:35
+#: ../views/node/detail.php:37 ../views/node/detail.php:39
+#: ../views/node/list.php:35 ../views/node/list.php:37
+#: ../views/node/meta.php:35 ../views/node/meta.php:37
+#: ../views/node/property.php:35 ../views/node/property.php:37
+#: ../views/node/step1.php:40 ../views/node/step1.php:42
+#: ../views/node/step2.php:44 ../views/node/step2.php:46
+#: ../views/node/tag.php:38 ../views/node/tag.php:40
+msgctxt "structure"
+msgid "Create new node"
+msgstr "Créer une rubrique"
+
+#: ../views/content/admin.php:47
+msgctxt "structure"
+msgid "Delete content"
+msgstr "Supprimer l'article"
+
+#: ../views/content/admin.php:50
+msgctxt "structure"
+msgid "Delete content \"{content}\""
+msgstr "Supprimer l'article \"{content}\""
+
+#: ../views/content/admin.php:57 ../views/node/_itemView.php:131
+#: ../views/node/_itemView.php:133 ../views/node/admin.php:58
+msgctxt "structure"
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ../views/content/admin.php:58 ../views/node/admin.php:60
+msgctxt "structure"
+msgid "View"
+msgstr "Visualiser"
+
+#: ../views/content/admin.php:67
+msgctxt "structure"
+msgid "Open content"
+msgstr "Voir l'article"
+
+#: ../views/content/step1.php:20 ../views/content/step2.php:23
+#: ../views/content/step2.php:27 ../views/node/step1.php:22
+#: ../views/node/step2.php:23 ../views/node/step2.php:27
+msgctxt "structure"
+msgid "Step {n}"
+msgstr "Etape {n}"
+
+#: ../views/node/_detail.php:36
+msgctxt "structure"
+msgid "Node details were saved"
+msgstr "Les informations de la rubrique ont été enregistrées"
+
+#: ../views/node/_detail.php:43
+msgctxt "structure"
+msgid "Node details were not saved"
+msgstr "Les informations de la rubrique n'ont pas été enregistrées"
+
+#: ../views/node/_headerView.php:22
+msgctxt "structure"
+msgid "Status"
+msgstr "Statut"
+
+#: ../views/node/_headerView.php:25
+msgctxt "structure"
+msgid "Title"
+msgstr "Titre"
+
+#: ../views/node/_headerView.php:28
+msgctxt "structure"
+msgid "Author"
+msgstr "Auteur"
+
+#: ../views/node/_headerView.php:31 ../views/node/_itemView.php:109
+msgctxt "structure"
+msgid "Order"
+msgstr "Ordre"
+
+#: ../views/node/_headerView.php:34
+msgctxt "structure"
+msgid "Action"
+msgstr "Action"
+
+#: ../views/node/_itemView.php:98 ../views/node/_itemView.php:100
+msgctxt "structure"
+msgid "Top"
+msgstr "En haut"
+
+#: ../views/node/_itemView.php:104 ../views/node/_itemView.php:106
+msgctxt "structure"
+msgid "Up"
+msgstr "Monter"
+
+#: ../views/node/_itemView.php:111 ../views/node/_itemView.php:113
+msgctxt "structure"
+msgid "Down"
+msgstr "Descendre"
+
+#: ../views/node/_itemView.php:117 ../views/node/_itemView.php:119
+msgctxt "structure"
+msgid "Bottom"
+msgstr "En bas"
+
+#: ../views/node/_itemView.php:125 ../views/node/_itemView.php:127
+msgctxt "structure"
+msgid "Edit"
+msgstr "Editer"
+
+#: ../views/node/_meta.php:41
+msgctxt "structure"
+msgid "Node metas were saved"
+msgstr "Les métas ont été enregistrées"
+
+#: ../views/node/_property.php:38
+msgctxt "structure"
+msgid "Node properties were saved"
+msgstr "Les propriétés ont été enregistrées"
+
+#: ../views/node/_property.php:45
+msgctxt "structure"
+msgid "Node properties were not saved"
+msgstr "Les propriétés n'ont pas été enregistrées"
+
+#: ../views/node/_tag.php:45
+msgctxt "structure"
+msgid "Node tags were saved"
+msgstr "Les mots-clefs ont été enregistrés"
+
+#: ../views/node/_tag.php:52
+msgctxt "structure"
+msgid "Node tags were not saved"
+msgstr "Les mots-clefs n'ont pas été enregistrés"
+
+#: ../views/node/admin.php:48
+msgctxt "structure"
+msgid "Delete node"
+msgstr "Supprimer la rubrique"
+
+#: ../views/node/admin.php:51
+msgctxt "structure"
+msgid "Delete node \"{node}\""
+msgstr "Supprimer la rubrique \"{node}\""
+
+#: ../views/node/admin.php:69
+msgctxt "structure"
+msgid "Open node"
+msgstr "Voir la rubrique"
+
+#~ msgctxt "structure"
+#~ msgid "Validate"
+#~ msgstr "Valider"
