@@ -25,7 +25,7 @@
 		// 'summaryView' => '_summaryView',
 		'template' => "\n<thead>\n{header}\n{summary}\n</thead>\n<tbody class=\"sortable\">\n{items}\n</tbody>\n<tfoot>\n{footer}\n</tfoot>\n",
 		'viewData' => array(
-				'title' => '{n} content in node|{n} contents in node',
+				'title' => '{n} content in node|{n} contents in node, page {pageNum} / {pageCount}',
 		),
 	));
 ?>
