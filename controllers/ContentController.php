@@ -306,7 +306,7 @@ class ContentController extends Controller {
 			$newContent->reconfigure();
 			$newContent->attributes = \Yii::app()->session['newcontent'];
 			if($newContent->templateId === null) {
-				throw new \CHttpException('500', \Yii::t('structure', 'Template is not defined for current conntent'));
+				throw new \CHttpException('500', \Yii::t('structure', 'Template is not defined for current content'));
 			}
 			if(isset($_POST[Html::modelName($newContent)]) === true) {
 				$newContent->authorId = \Yii::app()->user->id;
