@@ -32,24 +32,24 @@ use sweelix\yii1\web\helpers\Html;
 	<?php
 	endforeach;
 	?>
-		<?php echo Html::link(Yii::t('StructureModule.sweelix', 'Reset'), array('node/tag', 'nodeId' => $node->nodeId), array('class' => 'button danger'))?>
-		<?php echo Html::htmlButton(Yii::t('StructureModule.sweelix', 'Validate'), array('type' => 'submit', 'class' => 'success'))?>
+		<?php echo Html::link(Yii::t('structure', 'Reset'), array('node/tag', 'nodeId' => $node->nodeId), array('class' => 'button danger'))?>
+		<?php echo Html::htmlButton(Yii::t('structure', 'Validate'), array('type' => 'submit', 'class' => 'success'))?>
 
 	</fieldset>
 <?php
 	if((isset($notice) === true) && ($notice === true)) {
 		if($node->hasErrors() === false) {
 			echo Html::script(Html::raiseShowNotice(array(
-					'title' => '<span class="icon-bubble-dots light"></span> '. Yii::t('StructureModule.sweelix', 'Info'),
+					'title' => '<span class="icon-bubble-dots light"></span> '. Yii::t('structure', 'Info'),
 					'close' => '<span class="icon-circle-cancel light">x</span>',
-					'text' => Yii::t('StructureModule.sweelix', 'Node tags were saved'),
+					'text' => Yii::t('structure', 'Node tags were saved'),
 					'cssClass' => 'success'
 			)));
 		} else {
 			echo Html::script(Html::raiseShowNotice(array(
-					'title' => '<span class="icon-bubble-exclamation light"></span> '. Yii::t('StructureModule.sweelix', 'Error'),
+					'title' => '<span class="icon-bubble-exclamation light"></span> '. Yii::t('structure', 'Error'),
 					'close' => '<span class="icon-circle-cancel light">x</span>',
-					'text' => Yii::t('StructureModule.sweelix', 'Node tags were not saved'),
+					'text' => Yii::t('structure', 'Node tags were not saved'),
 					'cssClass' => 'danger'
 			)));
 		}
