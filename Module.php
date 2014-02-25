@@ -43,6 +43,11 @@ class Module extends BaseModule {
 	public $defaultController = 'node';
 
 	/**
+	 * @var integer page size
+	 */
+	public $pageSize = 20;
+
+	/**
 	 * Init the module with specific information.
 	 * @see CModule::init()
 	 *
