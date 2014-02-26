@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sweelix - Structure\n"
 "POT-Creation-Date: 2014-02-25 16:06+0100\n"
-"PO-Revision-Date: 2014-02-25 16:13+0100\n"
+"PO-Revision-Date: 2014-02-26 10:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: Sweelix <pgaultier@sweelix.net>\n"
 "Language: fr\n"
@@ -170,22 +170,22 @@ msgstr "Les métas ont été enregistrées"
 #: ../views/content/_property.php:50
 msgctxt "structure"
 msgid "Content properties were saved"
-msgstr "Les propriétés ont été sauvegardées"
+msgstr "Les propriétés ont été enregistrées"
 
 #: ../views/content/_property.php:57
 msgctxt "structure"
 msgid "Content properties were not saved"
-msgstr "Les propriétés n'ont pas été sauvegardées"
+msgstr "Les propriétés n'ont pas été enregistrées"
 
 #: ../views/content/_tag.php:48
 msgctxt "structure"
 msgid "Content tags were saved"
-msgstr "Les mots-clefs ont été sauvegardées"
+msgstr "Les mots-clefs ont été enregistrés"
 
 #: ../views/content/_tag.php:55
 msgctxt "structure"
 msgid "Content tags were not saved"
-msgstr "Les mots-clefs n'ont pas été sauvegardées"
+msgstr "Les mots-clefs n'ont pas été enregistrés"
 
 #: ../views/content/admin.php:25 ../views/content/admin.php:27
 #: ../views/content/detail.php:29 ../views/content/detail.php:31
