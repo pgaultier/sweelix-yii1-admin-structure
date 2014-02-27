@@ -1,6 +1,6 @@
 <?php
 /**
- * File TreeNodesWidget.php
+ * File TreeNodes.php
  *
  * PHP version 5.4+
  *
@@ -9,7 +9,7 @@
  * @license   http://www.sweelix.net/license license
  * @version   2.0.1
  * @link      http://www.sweelix.net
- * @category  views
+ * @category  widgets
  * @package   sweelix.yii1.admin.structure.widgets
  */
 
@@ -26,7 +26,7 @@ use sweelix\yii1\web\helpers\Html;
  * @license   http://www.sweelix.net/license license
  * @version   2.0.1
  * @link      http://www.sweelix.net
- * @category  views
+ * @category  widgets
  * @package   sweelix.yii1.admin.structure.widgets
  */
 class TreeNodes extends \CWidget {
