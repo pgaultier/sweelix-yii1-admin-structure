@@ -36,7 +36,7 @@ class TreeNodes extends \CWidget {
 	private $_nodes = null;
 
 	/**
-	 * @var SwNode current active node
+	 * @var Node current active node
 	 */
 	public $node = null;
 
@@ -75,7 +75,7 @@ class TreeNodes extends \CWidget {
 	/**
 	 * Render tree structure
 	 *
-	 * @param array   $data          array of SwNode
+	 * @param array   $data          array of Node
 	 * @param int     $currentNodeId current nodeId
 	 * @param boolean $start         first call of the method
 	 *
