@@ -1,0 +1,4 @@
+.module-structure {
+	background-image:url(../img/structure@2x.png);
+	background-image:url(../img/structure.png)\9;// css hack
+}
