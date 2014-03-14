@@ -292,7 +292,7 @@ class NodeController extends Controller {
 				$newNode->attributes = $_POST[Html::modelName($newNode)];
 				$nodeStatus = $newNode->validate();
 				if ($nodeStatus === true) {
-					if($newNode->save($this->currentNode->nodeId) === true) {
+					if($newNode->save(true, null, $this->currentNode->nodeId) === true) {
 						$newNode->refresh();
 						$this->redirect(array('detail', 'nodeId' => $newNode->nodeId));
 					}
