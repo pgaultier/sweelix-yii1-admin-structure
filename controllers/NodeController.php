@@ -228,7 +228,7 @@ class NodeController extends Controller {
 	public function actionStep1() {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
-			$newNode = new FormNode();
+			$newNode = new Node();
 			$newNode->setScenario('createStep1');
 			$newNode->attributes = \Yii::app()->session['newnode'];
 			if(isset($_POST[Html::modelName($newNode)]) === true) {
@@ -279,7 +279,7 @@ class NodeController extends Controller {
 	public function actionStep2() {
 		try {
 			\Yii::trace(__METHOD__.'()', 'sweelix.yii1.admin.structure.controllers');
-			$newNode = new FormNode();
+			$newNode = new Node();
 			$newNode->setScenario('createStep2');
 			$newNode->templateId = \Yii::app()->session['newnode']['templateId'];
 			$newNode->reconfigure();
@@ -292,7 +292,7 @@ class NodeController extends Controller {
 				$newNode->attributes = $_POST[Html::modelName($newNode)];
 				$nodeStatus = $newNode->validate();
 				if ($nodeStatus === true) {
-					if($newNode->save($this->currentNode->nodeId) === true) {
+					if($newNode->save(true, null, $this->currentNode->nodeId) === true) {
 						$newNode->refresh();
 						$this->redirect(array('detail', 'nodeId' => $newNode->nodeId));
 					}
