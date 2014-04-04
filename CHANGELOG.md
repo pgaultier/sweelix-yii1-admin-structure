@@ -1,4 +1,6 @@
+## 3.0.2
 
+  - fix proble in node controller
   - change entity node save() signature
   - adding missing files (license, ...)
 
