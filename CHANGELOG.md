@@ -1,6 +1,10 @@
+## 3.1.0
+
+  - set up new url system
+
 ## 3.0.2
 
-  - fix proble in node controller
+  - fix problem in node controller
   - change entity node save() signature
   - adding missing files (license, ...)
 
