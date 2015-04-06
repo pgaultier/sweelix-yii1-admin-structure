@@ -20,10 +20,10 @@ $nexPage = min($currentPage + 1, $widget->dataProvider->pagination->pageCount - 
 ?>
 <tr>
 	<th colspan="6">
-		<?php if($currentPage > 0) echo Html::link('<', ['node/listContent', 'nodeId' => $this->currentNode->nodeId, 'page' => $previousPage], ['class' => 'button small']);?>
+		<?php if($currentPage > 0) echo Html::link('<', array('node/listContent', 'nodeId' => $this->currentNode->nodeId, 'page' => $previousPage), array('class' => 'button small'));?>
 		<?php if($widget->dataProvider->totalItemCount > 0):?>
-			<span class="in-button"><?php echo(Yii::t('structure', $title, [$widget->dataProvider->totalItemCount, '{pageNum}' => ($currentPage + 1), '{pageCount}' => $widget->dataProvider->pagination->pageCount]));?></span>
+			<span class="in-button"><?php echo(Yii::t('structure', $title, array($widget->dataProvider->totalItemCount, '{pageNum}' => ($currentPage + 1), '{pageCount}' => $widget->dataProvider->pagination->pageCount)));?></span>
 		<?php endif;?>
-		<?php if($currentPage < ($widget->dataProvider->pagination->pageCount-1)) echo Html::link('>', ['node/listContent', 'nodeId' => $this->currentNode->nodeId, 'page' => $nexPage], ['class' => 'button small']);?>
+		<?php if($currentPage < ($widget->dataProvider->pagination->pageCount-1)) echo Html::link('>', array('node/listContent', 'nodeId' => $this->currentNode->nodeId, 'page' => $nexPage), array('class' => 'button small'));?>
 	</th>
 </tr>
