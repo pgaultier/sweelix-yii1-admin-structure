@@ -43,7 +43,7 @@ class NodeController extends Controller {
 	/**
 	 * @var array breadcrumbs
 	 */
-	private $_breadCrumb=[];
+	private $_breadCrumb=array();
 
 	/**
 	 * Lazy load and build breadcrumb for selected id.
@@ -571,24 +571,24 @@ class NodeController extends Controller {
 			$contentCriteriaBuilder->orderBy('contentOrder');
 			if(\Yii::app()->request->isAjaxRequest === true) {
 				$this->renderPartial('_list', array(
-					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider([
-						'pagination' => [
+					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider(array(
+						'pagination' => array(
 							'pageSize' => $this->module->pageSize,
 							'currentPage' => $page,
-						]
-					]),
+                        )
+                    )),
 				));
 			} else {
 				$this->render('list', array(
 					'breadcrumb' => $this->buildBreadcrumb($this->currentNode->nodeId),
 					'mainMenu' => $this->buildMainMenu(0, false),
 					'node' => $this->currentNode,
-					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider([
-						'pagination' => [
+					'contentsDataProvider'=>$contentCriteriaBuilder->getActiveDataProvider(array(
+						'pagination' => array(
 							'pageSize' => $this->module->pageSize,
 							'currentPage' => $page,
-						]
-					]),
+                        )
+                    )),
 				));
 			}
 		} catch(\Exception $e) {
