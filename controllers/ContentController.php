@@ -451,11 +451,12 @@ class ContentController extends Controller
             if (isset($_POST[Html::modelName($this->currentContent)]) === true) {
                 $originalNodeId = $this->currentContent->nodeId;
                 $this->currentContent->setScenario('updateProperty');
-                $this->currentContent->attributes = $_POST[Html::modelName($this->currentContent)];
-                if (CPropertyValue::ensureBoolean($_POST[Html::modelName($this->currentContent)]['contentStartDateActive']) === false) {
+                $modelName = Html::modelName($this->currentContent);
+                $this->currentContent->attributes = $_POST[$modelName];
+                if (CPropertyValue::ensureBoolean($_POST[$modelName]['contentStartDateActive']) === false) {
                     $this->currentContent->contentStartDate = null;
                 }
-                if (CPropertyValue::ensureBoolean($_POST[Html::modelName($this->currentContent)]['contentEndDateActive']) === false) {
+                if (CPropertyValue::ensureBoolean($_POST[$modelName]['contentEndDateActive']) === false) {
                     $this->currentContent->contentEndDate = null;
                 }
 
@@ -582,7 +583,9 @@ class ContentController extends Controller
                 $this->renderPartial('_tag', array(
                     'groups' => $groups,
                     'content' => $this->currentContent,
-                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array('pagination' => false)),
+                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array(
+                        'pagination' => false
+                    )),
                     'notice' => $notice,
                 ));
             } else {
@@ -592,13 +595,18 @@ class ContentController extends Controller
                     'groups' => $groups,
                     'content' => $this->currentContent,
                     'node' => $this->currentNode,
-                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array('pagination' => false)),
+                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array(
+                        'pagination' => false
+                    )),
                     'notice' => $notice,
                 ));
             }
         } catch (Exception $e) {
-            Yii::log('Error in ' . __METHOD__ . '():' . $e->getMessage(), CLogger::LEVEL_ERROR,
-                'sweelix.yii1.admin.structure.controllers');
+            Yii::log(
+                'Error in ' . __METHOD__ . '():' . $e->getMessage(),
+                CLogger::LEVEL_ERROR,
+                'sweelix.yii1.admin.structure.controllers'
+            );
             throw $e;
         }
     }
@@ -621,8 +629,11 @@ class ContentController extends Controller
             }
             $this->renderPartial('_contentHeader', array('content' => $content));
         } catch (Exception $e) {
-            Yii::log('Error in ' . __METHOD__ . '():' . $e->getMessage(), CLogger::LEVEL_ERROR,
-                'sweelix.yii1.admin.structure.controllers');
+            Yii::log(
+                'Error in ' . __METHOD__ . '():' . $e->getMessage(),
+                CLogger::LEVEL_ERROR,
+                'sweelix.yii1.admin.structure.controllers'
+            );
             throw $e;
         }
     }
@@ -693,7 +704,9 @@ class ContentController extends Controller
                 $this->renderPartial('_meta', array(
                     'content' => $this->currentContent,
                     'metas' => $metas,
-                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array('pagination' => false)),
+                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array(
+                        'pagination' => false
+                    )),
                     'notice' => $notice,
                 ));
             } else {
@@ -703,13 +716,18 @@ class ContentController extends Controller
                     'metas' => $metas,
                     'content' => $this->currentContent,
                     'node' => $this->currentNode,
-                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array('pagination' => false)),
+                    'contentsDataProvider' => $contentCriteriaBuilder->getActiveDataProvider(array(
+                        'pagination' => false
+                    )),
                     'notice' => $notice,
                 ));
             }
         } catch (Exception $e) {
-            Yii::log('Error in ' . __METHOD__ . '():' . $e->getMessage(), CLogger::LEVEL_ERROR,
-                'sweelix.yii1.admin.structure.controllers');
+            Yii::log(
+                'Error in ' . __METHOD__ . '():' . $e->getMessage(),
+                CLogger::LEVEL_ERROR,
+                'sweelix.yii1.admin.structure.controllers'
+            );
             throw $e;
         }
     }
@@ -736,8 +754,11 @@ class ContentController extends Controller
             }
             return $result;
         } catch (Exception $e) {
-            Yii::log('Error in ' . __METHOD__ . '():' . $e->getMessage(), CLogger::LEVEL_ERROR,
-                'sweelix.yii1.admin.structure.controllers');
+            Yii::log(
+                'Error in ' . __METHOD__ . '():' . $e->getMessage(),
+                CLogger::LEVEL_ERROR,
+                'sweelix.yii1.admin.structure.controllers'
+            );
             return false;
         }
     }
@@ -774,8 +795,11 @@ class ContentController extends Controller
             }
             $this->redirect($redirectUrl);
         } catch (Exception $e) {
-            Yii::log('Error in ' . __METHOD__ . '():' . $e->getMessage(), CLogger::LEVEL_ERROR,
-                'sweelix.yii1.admin.structure.controllers');
+            Yii::log(
+                'Error in ' . __METHOD__ . '():' . $e->getMessage(),
+                CLogger::LEVEL_ERROR,
+                'sweelix.yii1.admin.structure.controllers'
+            );
             throw $e;
         }
     }
