@@ -12,7 +12,5 @@
  * @category  views
  * @package   sweelix.yii1.admin.structure.views.content
  */
-?>
-<?php
-	$this->renderPartial('_contentHeader', array('content'=>$content));
-?>
+
+    $this->renderPartial('_contentHeader', array('content'=>$content));
