@@ -85,7 +85,7 @@ if($data->isPublishable(false) === false) {
 			if (Yii::app()->user->checkAccess('users') === true) {
 				echo Html::link(
 					$data->author->authorFirstname.' '.$data->author->authorLastname,
-					array('/sweeft/users/user/edit', 'id' => $data->author->authorId),
+					array('/sweeft/users/default/edit', 'id' => $data->author->authorId),
 					array('title'=>$data->author->authorFirstname.' '.$data->author->authorLastname)
 				);
 			} else {

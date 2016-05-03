@@ -865,7 +865,7 @@ class NodeController extends Controller
                 if (($sourceNode !== null) && ($targetNode !== null)) {
                     $sourceNode->move(Yii::app()->getRequest()->getParam('target'), $targetNode->nodeId);
                     $node = Node::model()->findByPk($nodeId);
-                    $this->widget('structure.widgets.TreeNodesWidget', array('node' => $node));
+                    $this->widget('sweelix\yii1\admin\structure\widgets\TreeNodes', array('node' => $node));
                 } else {
                     throw new CHttpException(400);
                 }
