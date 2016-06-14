@@ -13,6 +13,11 @@
  * @package   sweelix.yii1.admin.structure.views.content
  */
 use sweelix\yii1\web\helpers\Html;
+
+$sweeftModule = Yii::app()->getModule('sweeft');
+Yii::app()->getClientScript()->registerCssFile($sweeftModule->getAssetsUrl().'/css/jquery-ui.css');
+Yii::app()->getClientScript()->registerCoreScript('jquery.ui');
+Yii::app()->getClientScript()->registerScriptFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/js/jquery-ui-i18n.min.js');
 ?>
 <?php $this->widget('sweelix\yii1\admin\core\widgets\Breadcrumb', array(
 		'elements' => array(
